@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: PremierSans-Heavy, Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+  :root {
+    --header-color: #76766f;
+    --navmain-color: #37003c;
+    --navtext-color: #fff;
+    --borderbottom-color: rgb(212, 212, 212);
+    --hoverbackground-color: rgb(241, 240, 240);
+    --dropdown-color:  #963cff;
+  }
+
+  .club-content-container {
+    border: 1px solid var(--borderbottom-color);
+    width: 260px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .club-logo-img-cont img{
+    height: 5rem;
+    z-index: 1;
+  }
+  .club-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  .club-content-container svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    fill: rgb(0, 0, 0);
+    opacity: 0.1;
+  }
+  .bottom-color {
+    position: absolute;
+    height: 0.3rem;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .clubs-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .table-wrapper .section-title{
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+  }
+
+
+
+  .standing-big.clubs tbody tr td.club {
+    width: 50%;
+  }
+  .standing-big.clubs tr td,   .standing-big.clubs tr th {
+    text-align: left;
+  }
+
+  .standing-big.clubs tbody tr td .venue-container {
+    justify-content: flex-start;
+    margin: 0;
+  }
+ 
+  .standing-big.clubs tbody tr {
+    cursor: pointer;
+  }
+  td.arrow-cell i {
+    transition: 0.3s ease;
+  }
+  .standing-big.clubs tbody tr:hover td > i {
+    padding-left: 1rem;
+  }
+  .standing-big.clubs tbody tr:hover .long,
+  .standing-big.clubs tbody tr:hover .venue-container p{
+    text-decoration: underline;
+  }
+  tbody  td.arrow-cell {
+    width: 15%;
+  }

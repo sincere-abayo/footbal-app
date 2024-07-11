@@ -1,0 +1,257 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: PremierSans-Heavy, Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+:root {
+    --header-color: #76766f;
+    --navmain-color: #37003c;
+    --navtext-color: #fff;
+    --borderbottom-color: rgb(212, 212, 212);
+    --hoverbackground-color: rgb(241, 240, 240);
+    --dropdown-color:  #963cff;
+}
+.video-hero-content-container,
+.video-page-wrapper > .editors-choice-imgs, .video-page-wrapper > h2, .playlists-wrapper, .popular-playlist h2, .personalised-video  {
+    width: 86rem;
+    max-width: 100%;
+}
+
+.video-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+.video-hero {
+    height: 600px;
+    background-color: var(--navmain-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.video-hero-content-container {
+    height: 530px;
+    background-color: var(--navtext-color);
+    border-radius: 25px;
+    color: var(--navmain-color);
+    display: flex;
+    overflow: hidden;
+}
+.video-hero-content {
+    width: 35%;
+    padding: 3rem 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+.video-hero-content h3 {
+    font-weight: 900;
+    font-size: 2.8rem;
+    font-family: lato, sans-serif;
+}
+
+.video-hero-content > button {
+    width: 100%;
+    background-color: var(--navmain-color);
+    color: var(--navtext-color);
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    font-family: lato, sans-serif;
+    font-weight: 300;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+} 
+.video-hero-content button:hover {
+    background-color: var(--hoverbackground-color);
+    color: var(--navmain-color);
+}
+.video-hero-img-cont {
+    width: 65%;
+    overflow: hidden;
+    position: relative;
+}
+.video-hero-img-cont img {
+    height: 100%;
+    object-fit: contain;
+    transition: 0.3s ease;
+    cursor: pointer;
+    z-index: 0;
+}
+.video-hero-img-cont img:hover {
+    transform: scale(1.2);
+} 
+.video-pagination {
+    position: absolute;
+    z-index: 1;
+    bottom: 1rem;
+    right: 50%;
+    display: flex;
+    gap: 0.5rem;
+}
+.video-dot-pagination{
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.video-dot-pagination.active {
+    background-color: white;
+}
+.toggle-videos {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.toggle-videos button {
+    padding: 0.8rem;
+    background-color: transparent;
+    border: 1px solid var(--borderbottom-color);
+    cursor: pointer;
+}
+.toggle-videos button:hover {
+    background-color: var(--navmain-color);
+    color: var(--navtext-color);
+    border: none;
+}
+.backward i {
+    transform: rotate(180deg);
+}
+.backward {
+    border-top-left-radius: 5px;
+    border-right: none;
+}
+
+
+.video-page-wrapper .editors-choice-imgs{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.video-page-wrapper h2 {
+    margin-top: 2rem;
+}
+
+.popular-playlist {
+    margin: 2rem 0;
+    padding: 4rem 1rem;
+    background-color: var(--navmain-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: white
+}
+.playlists-wrapper {
+    display:  grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+}
+.playlist-cont img{
+    width: 100%;
+    object-fit: contain;
+  
+}
+.playlist-cont {
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    background-color: black;
+    max-height: 30rem;
+}
+.playlist-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    padding: 1rem 1rem;
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    cursor: pointer;
+    transition: 0.3s ease;
+    gap: 1rem;
+    background: linear-gradient(180deg, rgba(100, 84, 95, 0.103), rgba(100, 84, 95, 0.553));
+}
+.playlist-info button {
+    width: 100%;
+    background-color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 5px;
+    display: none;
+    font-family: lato, sans-serif;
+    font-weight: 300;
+    cursor: pointer;
+}
+.popular-playlist h2, .popular-playlist a, .popular-playlist a > span, .popular-playlist i {
+    color: white;
+}
+.popular-playlist a > span {
+    font-family: lato, sans-serif;
+    font-weight: 300;
+}
+
+.playlist-title {
+    font-weight: 900;
+    font-family: lato, sans-serif;
+    font-size: 2.5rem;
+}
+.playlist-info:hover {
+    background: linear-gradient(180deg, rgba(100, 84, 95, 0.103) 40%,  rgba(100, 84, 95, 0.553), rgba(74, 34, 86, 0.967));
+}
+.playlist-info:hover button{
+    display: block;
+}
+
+.personalised-video {
+    background-color: var(--navmain-color);
+    height: 15.5rem;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.personalised-video-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 2rem 10rem 2rem 2rem;
+    gap: 1rem;
+}
+.personalised-video a {
+    color: white;
+}
+.personalised-video a > span > i{
+    transition: 0.3s ease;
+}
+.personalised-video a > span:hover i{
+    margin-left: 0.8rem;
+} 
+.personalised-video a > span:hover {
+    text-decoration: underline;
+}
+
+.personalised-video-img {
+    height: 100%;
+    width: 45%;
+    background: url("../public/images/video/personalisedvideo.webp") center/cover no-repeat;
+}
+.personalised-video-title {
+    font-weight: 900;
+    font-size: 2rem;
+    font-family: lato, sans-serif;
+}
+.personalised-video-content p {
+    margin-bottom: 2rem;
+}
