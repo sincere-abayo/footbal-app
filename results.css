@@ -1,0 +1,28 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: PremierSans-Heavy, Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+:root {
+    --header-color: #76766f;
+    --navmain-color: #37003c;
+    --navtext-color: #fff;
+    --borderbottom-color: rgb(212, 212, 212);
+    --hoverbackground-color: rgb(241, 240, 240);
+    --dropdown-color:  #963cff;
+}
+
+.fixture-match-container .time > p{
+    color: var(--navtext-color);
+    font-weight: 800;
+    background-color: var(--navmain-color);
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+}
+.fixture-match-container:hover .time > p{
+    border: none;
+}

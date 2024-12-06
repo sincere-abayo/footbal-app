@@ -1,0 +1,243 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: PremierSans-Heavy, Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+:root {
+    --header-color: #76766f;
+    --navmain-color: #37003c;
+    --navtext-color: #fff;
+    --borderbottom-color: rgb(212, 212, 212);
+    --hoverbackground-color: rgb(241, 240, 240);
+    --dropdown-color:  #963cff;
+}
+
+.injury > h1, 
+.key-injury-news, 
+.injury-filter, 
+.clubs-short-names,
+.each-team-injury-wrapper p,
+.each-team-injury-wrapper em,
+.each-team-injury-wrapper h3,
+.each-team-injury
+{
+    width: 86rem;
+}
+
+.injury > h1 {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.injury {
+    flex-direction: row;
+    justify-content: center;
+}
+.injury-section-wrapper{
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
+.key-injury-news{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    overflow: scroll;
+}
+
+.injury-container {
+    border: 1px solid var(--borderbottom-color);
+    width: 216px;
+    height: 268px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.injury-img-container {
+    width: 100%;
+    height: 50%;
+}
+.injury-img-container img {
+    object-fit: contain;
+    width: 100%;
+}
+.key-injury-news-heading {
+    font-size: 1.6rem;
+    font-weight: 900;
+    font-family: lato, sans-serif;
+    color: var(--navmain-color);
+    margin-bottom: 0.5rem;
+
+}
+.injury-item-title {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--navmain-color);
+    padding: 0 0.5rem;
+    line-height: 1.6rem;
+    position: relative;
+}
+.injury-item-title img {
+    position: absolute;
+    height: 3.5rem;
+    left: 50%;
+    top: -3.5rem;
+    transform: translateX(-50%);
+}
+.injury-container p{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.5rem;
+}
+.injury-container p a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: lato, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem
+}
+.injury-container p a i {
+    font-size: 0.6rem;
+}
+.key-injury-content {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+
+}
+
+
+
+/*injury-filter*/
+.injury-filter-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+.injury-filter {
+    max-width: 100%;
+}
+.injury-filter-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--borderbottom-color);
+}
+.fb {
+    color: var(--navmain-color);
+    font-size: 0.8rem;
+}
+.clubs-short-names {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--borderbottom-color);
+}
+.club-container {
+    width: 80px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    background-color: var(--hoverbackground-color);
+    border-radius: 20px;
+}
+.club-container img {
+    height: 75%;
+    object-fit: contain;
+}
+.club-container span {
+    color: var(--navmain-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* each-team-injury-wrapper */
+.each-team-injury-wrapper p,
+.each-team-injury-wrapper em,
+.each-team-injury-wrapper h3,
+.each-team-injury {
+    max-width: 100%;
+}
+.each-team-injury-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.each-team-injury h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.team-injury-heading {
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: red;
+    padding: 1rem;
+    gap: 2rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.team-injury-heading img {
+    height: 50px;
+}
+.team-injury-heading h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+}
+.team-injury-container {
+    width: 100%;
+}
+.team-injury-table {
+    width: 100%;
+    border: 1px solid var(--borderbottom-color);
+}
+
+.team-injury-table td, .team-injury-table th{
+    text-align: start;
+    padding-left: 3rem;
+}
+td.pl-name {
+    font-size: 1rem;
+    font-weight: 700;
+}
+td a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: lato, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+td a i{
+    font-size: 0.6rem;
+}
